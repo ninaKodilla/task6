@@ -1,0 +1,12 @@
+.form__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.upload__container {
+    width: 100%;
+}
+.upload__txt {
+    font-size: 50px;
+}
