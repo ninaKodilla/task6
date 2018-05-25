@@ -21,7 +21,6 @@ function switched(request,response) {
     switch (request.url) {
         case '/':
         case '/start':
-            handlers.style(request, response);
             handlers.welcome(request, response);
             break;
         case '/upload':
@@ -29,6 +28,12 @@ function switched(request,response) {
             break;
         case '/show':
             handlers.show(request, response);
+            break;
+        case '/style.css':
+            handlers.style(request, response);
+            break;
+        case '/script.js':
+            handlers.script(request, response);
             break;
     }
 }
