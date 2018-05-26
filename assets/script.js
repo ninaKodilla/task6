@@ -1,5 +1,3 @@
-
-
 function getInitialValue() {
     const val = document.querySelector('.form__input');
 
@@ -12,7 +10,7 @@ function inputValue() {
     const val = document.querySelector('.form__input');
     const header = document.querySelector('.upload__header');
 
-    val.value= sessionStorage.getItem(val);
+    val.value = sessionStorage.getItem(val);
 }
 
 function init() {
