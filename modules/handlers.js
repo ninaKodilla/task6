@@ -8,6 +8,8 @@ exports.upload = function(request, response) {
         fs.renameSync(files.upload.path, "test.png");
         fs.readFile('templates/upload.html', function(err, html) {
             response.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
+            var input = fields.form__input;
+            response.write(input);
             response.write(html);
             response.end();
         });
@@ -16,7 +18,7 @@ exports.upload = function(request, response) {
 
 exports.welcome = function(request, response) {
     console.log("Rozpoczynam obsługę żądania welcome.");
-    fs.readFile('templates/start.html', function(err, html) {
+    fs.readFile('templates/start.html', 'utf-8', function(err, html) {
         response.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
         response.write(html);
         response.end();
@@ -50,6 +52,5 @@ exports.script = function(request, response) {
         response.writeHead(200, {'Content-Type': 'text/javascript'});
         response.write(data);
         response.end();
-        console.log(data)
     });
 }
