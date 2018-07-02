@@ -1,0 +1,27 @@
+
+.form__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+}
+
+.form__input {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+.upload__container {
+    width: 100%;
+}
+.upload__txt {
+    font-size: 20px;
+}
